@@ -9,9 +9,7 @@ workflows: Workflow2: {
 	jobs: workflow2_job1: {
 		"runs-on": "ubuntu-latest"
 		defaults: run: {}
-		steps: [{
-			name: "Install Go"
-			uses: "actions/setup-go@v2"
+		steps: [_setupGo & {
 			with: "go-version": "1.20.x"
 		}, {
 			name: "Checkout code"

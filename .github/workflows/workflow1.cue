@@ -22,9 +22,7 @@ workflows: Workflow1: {
 			}
 			"runs-on": "${{ matrix.platform }}"
 			defaults: run: {}
-			steps: [{
-				name: "Install Go"
-				uses: "actions/setup-go@v3"
+			steps: [_setupGo & {
 				with: "go-version": "${{ matrix.go-version }}"
 			}, {
 				name: "Checkout code"
