@@ -1,3 +1,3 @@
 module github.com/cue-lang/github-actions-example
 
-go 1.17
+go 1.20
