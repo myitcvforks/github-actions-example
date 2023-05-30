@@ -8,7 +8,7 @@ workflows: Workflow2: {
 	name: "Workflow 2"
 	jobs: workflow2_job1: {
 		"runs-on": "ubuntu-latest"
-		defaults: run: shell: "bash"
+		defaults: run: {}
 		steps: [{
 			name: "Install Go"
 			uses: "actions/setup-go@v2"

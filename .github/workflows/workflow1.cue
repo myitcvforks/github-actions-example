@@ -21,7 +21,7 @@ workflows: Workflow1: {
 				}
 			}
 			"runs-on": "${{ matrix.platform }}"
-			defaults: run: shell: "bash"
+			defaults: run: {}
 			steps: [{
 				name: "Install Go"
 				uses: "actions/setup-go@v3"
@@ -40,7 +40,7 @@ workflows: Workflow1: {
 		workflow1_job2: {
 			needs:     "workflow1_job1"
 			"runs-on": "ubuntu-latest"
-			defaults: run: shell: "bash"
+			defaults: run: {}
 			steps: [{
 				run: "echo Done"
 			}]
